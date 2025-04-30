@@ -1,0 +1,227 @@
+/* Profile Management Modal Styles */
+.profile-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.profile-modal-content {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 700px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.profile-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.profile-modal-header h2 {
+  margin: 0;
+  color: #124734; /* Dark Green to match sidebar */
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.profile-close-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #777;
+}
+
+.profile-close-button:hover {
+  color: #124734; /* Dark Green to match sidebar */
+}
+
+.profile-tabs {
+  display: flex;
+  border-bottom: 1px solid #e0e0e0;
+  background-color: #f9f9f9;
+}
+
+.profile-tab {
+  padding: 12px 16px;
+  border: none;
+  background: none;
+  font-size: 14px;
+  font-weight: bold;
+  color: #555;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+}
+
+.profile-tab:hover {
+  color: #124734; /* Dark Green to match sidebar */
+}
+
+.profile-tab.active {
+  color: #124734; /* Dark Green to match sidebar */
+  border-bottom: 3px solid #124734; /* Dark Green to match sidebar */
+  background-color: white;
+}
+
+.profile-content {
+  padding: 20px;
+}
+
+.profile-form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.profile-form-header h3 {
+  margin: 0;
+  color: #124734; /* Dark Green to match sidebar */
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.profile-edit-button {
+  background-color: #f1f1f1;
+  color: #124734; /* Dark Green to match sidebar */
+  border: 1px solid #124734; /* Dark Green to match sidebar */
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.profile-edit-button:hover {
+  background-color: #e0e0e0;
+}
+
+.profile-form-group {
+  margin-bottom: 16px;
+}
+
+.profile-form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #555;
+  font-size: 14px;
+}
+
+.profile-form-group input,
+.profile-form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.profile-form-group input:focus,
+.profile-form-group textarea:focus {
+  border-color: #124734; /* Dark Green to match sidebar */
+  outline: none;
+}
+
+.profile-form-group input.readonly,
+.profile-form-group textarea.readonly {
+  background-color: #f9f9f9;
+  cursor: default;
+}
+
+.profile-button-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.profile-save-button {
+  background: #124734; /* Dark Green to match sidebar */
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.profile-save-button:hover {
+  background: #0d3526; /* Darker green */
+}
+
+.profile-cancel-button {
+  background: white;
+  color: #124734; /* Dark Green to match sidebar */
+  border: 1px solid #124734; /* Dark Green to match sidebar */
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.profile-cancel-button:hover {
+  background: #f1f1f1;
+}
+
+/* Toggle Switch for 2FA */
+.toggle-switch {
+  display: flex;
+  align-items: center;
+}
+
+.toggle-switch input[type="checkbox"] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+  position: absolute;
+}
+
+.toggle-switch label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 50px;
+  height: 25px;
+  background: #ddd;
+  display: block;
+  border-radius: 25px;
+  position: relative;
+  margin-right: 10px;
+}
+
+.toggle-switch label:after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 21px;
+  height: 21px;
+  background: #fff;
+  border-radius: 21px;
+  transition: 0.3s;
+}
+
+.toggle-switch input:checked + label {
+  background: #124734; /* Dark Green to match sidebar */
+}
+
+.toggle-switch input:checked + label:after {
+  left: calc(100% - 2px);
+  transform: translateX(-100%);
+}
+
+.toggle-switch label:active:after {
+  width: 30px;
+}

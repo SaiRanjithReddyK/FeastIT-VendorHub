@@ -1,0 +1,210 @@
+.truncate-text {
+  max-width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.action-button {
+  background-color: #4caf50; /* or your theme's primary */
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.action-button:hover {
+  background-color: #45a049;
+}
+
+.title-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.add-button {
+  background-color: #007bff; /* Bootstrap blue or pick any theme-specific blue */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 14px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 200px;
+}
+
+.add-button:hover {
+  background-color: #0056b3;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1001;
+}
+
+.modal-content {
+  background-color: #fff;
+  width: 30%;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow-y: auto; /* Enables scrolling inside modal if needed */
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 8px;
+  margin-bottom: 1rem;
+}
+
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0;
+  width: 50px;
+}
+
+.modal-close:hover {
+  color: #ff4d4d;
+  background-color: transparent; /* Prevent green hover bg */
+}
+
+.menu-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.menu-form label {
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.menu-form input,
+.menu-form textarea {
+  background-color: #e7d5d5; /* Light rose as in the image */
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 0.95rem;
+  resize: none;
+}
+
+.menu-form input:focus,
+.menu-form textarea:focus {
+  outline: 2px solid #ccc;
+}
+
+.save-button {
+  background-color: #4caf50; /* Brand green */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.2s ease;
+}
+
+.save-button:hover {
+  background-color: #449d48;
+}
+
+
+
+/* Add these styles to your MenuManagement.css file */
+
+/* Style for the button group container */
+.button-group {
+  display: flex;
+  gap: 10px;
+}
+
+/* Style for the edit button */
+.edit-button {
+  background-color: #4a6bff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.edit-button:hover {
+  background-color: #3a55d9;
+}
+
+/* Styles for the action buttons in edit mode */
+.action-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.edit-action-button {
+  background-color: #ffa500;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background-color 0.3s;
+}
+
+.edit-action-button:hover {
+  background-color: #e69500;
+}
+
+.delete-action-button {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background-color 0.3s;
+}
+
+.delete-action-button:hover {
+  background-color: #e64444;
+}
+
+.menu-form select {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  background-color: #ead8d8;
+  font-family: "Courier New", Courier, monospace;
+  margin-bottom: 15px;
+}

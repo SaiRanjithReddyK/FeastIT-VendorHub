@@ -1,0 +1,75 @@
+/* Centering the content */
+.content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh; /* Adjust based on layout */
+  }
+  
+  /* Background Box Styling */
+  .background-box {
+    background-color: rgba(254, 104, 4, 0.21); /* #FE6804 with 21% opacity */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding-left: 60px;
+    margin-top: 100px;
+    width: 650px;
+    height: 520px;
+    padding-left: 10%;}
+  
+  /* Success Message Styling */
+  .success-message {
+    text-align: center;
+    padding: 20px;
+    margin-right: 90px;
+  }
+  
+  .success-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #004225; /* Dark green for success */
+  }
+  
+  .success-text {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  /* Responsive Styling */
+  @media (max-width: 768px) {
+    .background-box {
+      width: 90%;
+      padding: 20px;
+    }
+  
+    .success-title {
+      font-size: 20px;
+    }
+  
+    .success-text {
+      font-size: 14px;
+    }
+  }
+/* Center the success image */
+.success-image {
+    width: 150px; /* Adjust size as needed */
+    display: block;
+    margin: 0 auto 15px; /* Center image and add space below */
+    margin-right: 265px;
+    margin-top: 40px;
+  }  
+
+  .rejection-message {
+    color: #d32f2f;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+  
+  .rejection-reason {
+    color: #5c5c5c;
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.5;
+  }

@@ -1,0 +1,153 @@
+/* VendorAnalytics.css */
+.analytics-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  overflow: auto;
+}
+
+.analytics-container {
+  padding: 40px;
+  width: 100%;
+}
+
+.analytics-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 16px;
+  color: #124734;
+}
+
+.analytics-subtitle {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 30px;
+  display: block;
+}
+
+.cards-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.cards-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  width: 100%;
+}
+
+.analytics-card {
+  flex: 1;
+  border-radius: 12px;
+  padding: 25px;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  min-width: 200px;
+}
+
+.analytics-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.card-icon {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.card-value {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.card-label {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.loading-container {
+  text-align: center;
+  padding: 50px;
+}
+
+.spinner {
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #124734;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 20px;
+}
+
+.error-container {
+  padding: 20px;
+  background-color: #fff1f0;
+  border: 1px solid #ffa39e;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.error-title {
+  color: #cf1322;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.error-message {
+  color: #5c5c5c;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Background colors for different cards */
+.bg-orders { background-color: #f6ffed; }
+.bg-revenue { background-color: #e6f7ff; }
+.bg-customers { background-color: #fff2e8; }
+.bg-avg-order { background-color: #f9f0ff; }
+.bg-menu-items { background-color: #fcffe6; }
+.bg-rating { background-color: #fff1f0; }
+
+/* Icon colors for different cards */
+.color-orders { color: #52c41a; }
+.color-revenue { color: #1890ff; }
+.color-customers { color: #fa8c16; }
+.color-avg-order { color: #722ed1; }
+.color-menu-items { color: #a0d911; }
+.color-rating { color: #f5222d; }
+
+/* Media queries for responsive layout */
+@media (max-width: 1200px) {
+  .cards-row {
+    flex-wrap: wrap;
+  }
+  
+  .analytics-card {
+    flex-basis: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 768px) {
+  .cards-row {
+    flex-direction: column;
+  }
+  
+  .analytics-card {
+    width: 100%;
+  }
+}

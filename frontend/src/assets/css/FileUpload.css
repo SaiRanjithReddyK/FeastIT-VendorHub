@@ -1,0 +1,32 @@
+.file-upload-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .file-button {
+    background-color: #004225;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: center;
+    display: inline-block;
+  }
+  
+  .file-button:hover {
+    background-color: #002f17;
+  }
+  
+  .file-input {
+    display: none; /* Hide default file input */
+  }
+  
+  .file-name {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+  }
+  

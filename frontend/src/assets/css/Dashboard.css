@@ -1,0 +1,140 @@
+.main-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.top-header {
+  width: 100%;
+  background: #E87500;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.content-layout {
+  display: flex;
+  height: 100%;
+}
+
+.sidebar-container {
+  width: 220px;
+  transition: width 0.3s ease-in-out;
+}
+
+.dashboard-content {
+  flex-grow: 1;
+  padding: 20px;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+.expanded {
+  margin-left: 0;
+}
+
+.compact {
+  margin-left: 220px;
+}
+
+.dashboard-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.dashboard-subtitle {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.dashboard-widgets {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.widget {
+  background: #fff3cd;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.dashboard-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.dashboard-btn {
+  width: 500px;
+  height: 290px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(232, 117, 0, 0.9);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dashboard-btn:hover {
+  background-color: #e68400;
+  transform: scale(1.05);
+}
+
+.pdf-modal {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  right: 5%;
+  bottom: 5%;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  z-index: 9999;
+}
+
+.pdf-overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.close-btn {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  float: right;
+  border-radius: 5px;
+}
+
+.notification-tag {
+  background-color: red;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 50%;
+  position: absolute;
+  top: -8px;
+  right: -12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 24px;
+  height: 24px;
+  z-index: 1;
+}

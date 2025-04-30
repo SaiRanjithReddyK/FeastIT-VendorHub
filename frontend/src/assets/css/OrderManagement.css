@@ -1,0 +1,601 @@
+/* === Main Container (Holds Everything) === */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* === Top Header Container (Mini Container for Header) === */
+.top-header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+/* === Content Layout (Divides Sidebar & Content) === */
+.content-layout {
+  display: flex;
+  flex-grow: 1;
+  margin-top: 80px; /* Adjust height for header */
+}
+
+/* === Sidebar Container === */
+.sidebar-container {
+  width: 220px;
+  height: 100vh;
+  background-color: #124734;
+  position: fixed;
+  top: 80px;
+  left: 0;
+}
+
+/* === Order Management Content (Remaining Space) === */
+.order-content {
+  margin-left: 220px;
+  padding: 20px;
+  flex-grow: 1;
+}
+
+/* === Order Management Box === */
+.order-management-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* === Header Styling === */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header h2 {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* === Search Bar === */
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.search-input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+}
+
+.search-icon {
+  color: #555;
+  font-size: 16px;
+}
+
+/* === Table Styling === */
+.table-container {
+  overflow-x: visible;
+}
+
+.order-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.order-table th, .order-table td {
+  padding: 20px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.order-table th {
+  background-color: #f8f9fa;
+  font-weight: bold;
+}
+
+/* === Status Badges === */
+.status {
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.complete {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.pending {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.cancelled {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* === New Status Colors === */
+.confirmed {
+  background-color: #d1d4e7; 
+  color: #0f5132;
+}
+
+.preparing {
+  background-color: #cff4fc;  /* Soft blue */
+  color: #055160;
+}
+
+
+/* === Status Header & Filter Icon === */
+.status-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+}
+
+.filter-icon {
+  cursor: pointer;
+  color: #666;
+  transition: 0.3s;
+}
+
+.filter-icon:hover {
+  color: #000;
+}
+
+/* === Status Filter Dropdown === */
+.filter-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.status-filter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 19px;
+}
+
+.status-select {
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  background-color: white;
+  font-size: 14px;
+  min-width: 150px;
+}
+
+.status-select:focus {
+  outline: none;
+  border-color: #4a90e2;
+}
+/* === Divider Between Header & Table === */
+.order-divider {
+  width: 100%;
+  height: 2px;
+  background-color: #ddd;
+  margin: 20px 0;
+}
+
+/* === Action Menu (Three Dots) === */
+.action-cell {
+  position: relative;
+}
+
+.action-icon {
+  cursor: pointer;
+  color: #555;
+}
+
+.action-menu {
+  position: absolute;
+  right: 0;
+  top: 62%;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  min-width: 150px;
+  padding: 8px 0;
+}
+
+.action-menu-header {
+  padding: 8px 16px;
+  color: #333;
+  font-weight: bold;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 5px;
+}
+
+.action-menu button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 8px 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  font-size: 14px;
+}
+
+.action-menu button:hover {
+  background-color: #f5f5f5;
+}
+
+.action-menu button.active-status {
+  background-color: #e6f7ff;
+  color: #1890ff;
+  font-weight: bold;
+}
+
+/* Status styling */
+.status {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  text-transform: capitalize;
+  font-weight: 500;
+  font-size: 0.85rem;
+  text-align: center;
+  min-width: 120px;
+}
+
+.status.complete {
+  background-color: rgba(0, 200, 81, 0.15);
+  color: #00c851;
+}
+
+.status.pending {
+  background-color: rgba(255, 187, 51, 0.15);
+  color: #ffbb33;
+}
+
+.status.cancelled {
+  background-color: rgba(255, 0, 0, 0.15);
+  color: #ff0000;
+}
+
+/* Filter dropdown styling */
+.status-header {
+  position: relative;
+}
+
+.filter-icon {
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.dropdown-filter {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  min-width: 150px;
+}
+
+.dropdown-option {
+  padding: 8px 16px;
+  cursor: pointer;
+  color: #333;
+}
+
+.dropdown-option:hover {
+  background-color: #f5f5f5;
+}
+
+.dropdown-option.active {
+  background-color: #e6f7ff;
+  color: #1890ff;
+  font-weight: bold;
+}/* Header Container */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #E87500;
+  padding: 15px 20px;
+  color: white;
+}
+
+/* Hamburger Icon (Sidebar Toggle) */
+.hamburger-icon {
+  font-size: 24px;
+  cursor: pointer;
+  transition: 0.3s;
+  color: white;
+  margin-right: 10px;
+}
+
+.hamburger-icon:hover {
+  color: #124734;
+}
+
+/* Header Title */
+.header-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* === Main Layout === */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* === Header (Fixed on Top) === */
+.top-header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+/* === Content Layout (Sidebar + Main Content) === */
+.content-layout {
+  display: flex;
+  flex-grow: 1;
+  margin-top: 80px; /* Adjust height for header */
+}
+
+/* === Sidebar === */
+.sidebar-container {
+  width: 220px;
+  height: 100vh;
+  background-color: #124734;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+.sidebar-container.hidden {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+
+/* === Order Management Content === */
+.order-content {
+  padding: 20px;
+  transition: margin-left 0.3s ease-in-out, width 1.3s ease-in-out;
+}
+
+/* When Sidebar is Open (Compact View) */
+.order-content.compact {
+  margin-left: 220px;
+  width: calc(100% - 220px);
+}
+
+/* When Sidebar is Closed (Expanded View) */
+.order-content.expanded {
+  margin-left: 0;
+  width: 100%;
+}
+
+.inprogress {
+  background-color: #d1ecf1;
+  color: #0c5460;
+}
+
+.delivered {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.cancel-modal {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  width: 500px;
+  max-width: 90%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cancel-modal h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.cancel-modal textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin: 10px 0;
+  font-family: inherit;
+  resize: vertical;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.cancel-btn {
+  background-color: #f1f1f1;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.confirm-btn {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.confirm-btn:disabled {
+  background-color: #e74c3c80;
+  cursor: not-allowed;
+}
+
+/* Filter container */
+.dropdown-filter {
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+  width: 150px;
+  padding: 8px 0;
+  margin-top: 5px;
+  top: 100%;
+}
+
+/* Each filter option */
+.dropdown-option {
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+.dropdown-option:hover {
+  background-color: #f0f0f0;
+}
+
+/* Active selection style */
+.dropdown-option.active {
+  font-weight: 600;
+  background-color: #e8f0fe;
+  color: #1a73e8;
+}
+
+.status-header {
+  position: relative;
+  cursor: pointer;
+}
+
+.filter-icon {
+  margin-left: 8px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  margin-right: auto; 
+  width: 75%; 
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  padding: 8px 12px;
+  margin-bottom: 20px;
+}
+
+.search-bar input {
+  border: none;
+  background: transparent;
+  width: 100%;
+  outline: none;
+  font-size: 14px;
+}
+
+.order-title {
+  margin-bottom: 10px;
+}
+
+.status-filter-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.filter-icon {
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+.dropdown-filter {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+  width: 180px;
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+.dropdown-option {
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.dropdown-option:hover {
+  background-color: #f5f5f5;
+}
+
+.dropdown-option.active {
+  background-color: #e6f7ff;
+  font-weight: bold;
+}
+
+.status-cell {
+  text-align: center;
+}
+
+/* Add this to your existing CSS */
+.cancelled-note {
+  color: #888;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+/* Add this to your existing CSS */
+.warning-message {
+  color: #e74c3c;
+  font-weight: bold;
+  background-color: #ffeeee;
+  padding: 8px 12px;
+  border-radius: 4px;
+  border-left: 3px solid #e74c3c;
+  margin: 10px 0;
+}

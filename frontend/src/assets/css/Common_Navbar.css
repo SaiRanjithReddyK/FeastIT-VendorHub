@@ -1,0 +1,201 @@
+.menuSideScreenContent {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #124734;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    padding: 20px;
+    transition: transform 0.3s ease;
+    transform: translateX(-100%);
+  }
+
+  .menuSideScreenContent.show {
+    transform: translateX(0);
+  }
+
+  .navigation-container {
+      display: flex;
+      align-items: center;
+      background: #E87500;
+      padding: 10px;
+      width: 100vw;
+      height: auto;
+      top: 0;
+      position: fixed;
+      gap: 10px;
+  }
+
+  .logo-image {
+      width: 40px;
+      height: auto;
+      align-items: center;
+  }
+  .menu-icon {
+      color: white;
+      font-size: 18px;
+      cursor: pointer;
+      align-items: center;
+      padding-top: 10px;
+  }
+
+  .logo-text {
+      color: white;
+      align-items: center;
+      font-size: 20px;
+  }
+  .logo-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+  }
+
+  .logo-home {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+  }
+
+  .search-wrapper {
+      display: inline-flex;
+      border: 2px solid #E87500;
+      background-color: white !important;
+      border-radius: 50px;
+      align-items: center;
+      width: fit-content;
+  }
+
+  .search-bar {
+      color: #E87500;
+      background-color: transparent;
+      border-radius: 50px;
+      width: fit-content;
+      box-sizing: border-box;
+      height: 100%;
+      border: none;
+      text-align: center;
+      display: inline-flex;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .search-bar-container {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      width: auto;
+      gap: 10px;
+      background-color: transparent;
+      height: auto;
+      bottom: 2%;
+      left: 10%;
+      top: 50%;
+  }
+
+  .navbar {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      position: relative;
+  }
+
+  .addressDropDownContent {
+      position: absolute;
+      top: 100%;
+      left: 25%;
+      border-color:#E87500;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background-color: #333;
+      color: white;
+  }
+
+  .login-button {
+      border-color: white;
+      background-color: #E87500;
+      border-width: 2px;
+      border-radius: 50px;
+      height: auto;
+      width: auto;
+      margin-left: 10px;
+  }
+
+  .signup-button {
+      border-width: 2px;
+      border-radius: 50px;
+      background-color: white;
+      height: auto;
+      width: auto;
+      box-shadow: inset 0 0 2px #E87500;
+      margin-right: 10px;
+  }
+
+  .login-signup-buttons {
+      display: flex;
+      gap: 10px;
+  }
+
+  .cart {
+      cursor: pointer;
+      margin-left: auto;
+      align-items: center;
+      padding-top: 10px;
+      font-size: 18px;
+  }
+
+  .login-signup-cart {
+      align-items: center;
+      display: flex;
+      margin-left: auto;
+      padding-right: 25px;
+  }
+
+  .login-button-sidescreen {
+      width: 100%;
+      border-color: white;
+      background-color: #E87500;
+      border-width: 2px;
+      border-radius: 50px;
+      height: auto;
+      margin-left: 10px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+  }
+
+  .signup-button-sidescreen {
+      width: 100%;
+      border-width: 2px;
+      border-radius: 50px;
+      background-color: white;
+      height: auto;
+      box-shadow: inset 0 0 2px #E87500;
+      margin-left: 10px;
+      margin-bottom: 10px;
+  }
+
+  .register-restaurant {
+      color: white;
+      margin-left: 50px;
+      margin-top: 20px;
+  }
+
+  .register-restaurant:hover {
+      color: #E87500;
+  }
+
+  .close-menu-sideScreen-icon:hover{
+      color: #E87500;
+  }
+
+  .login-and-signup {
+      padding-right: 25px;
+  }

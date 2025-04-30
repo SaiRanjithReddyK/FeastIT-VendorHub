@@ -1,0 +1,90 @@
+/* Wrapper to center everything */
+.forgot-password-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+}
+
+/* Centering the background box properly */
+.forgot-password-box {
+    width: 450px;
+    padding: 25px;
+    background-color: rgba(254, 104, 4, 0.21);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center; /* ✅ Centering text */
+}
+
+/* Centered Title */
+.forgot-password-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+/* Centered Subtitle */
+.forgot-password-subtitle {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Form Input */
+.forgot-password-form .form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+/* Input Field */
+.forgot-password-form input {
+    width: 90%;
+    height: 35px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    font-size: 14px;
+    padding-left: 10px;
+    text-align: center; /* ✅ Centering input text */
+}
+
+/* Button Group */
+.forgot-password-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+/* Submit Button */
+.forgot-password-submit {
+    background-color: #004225;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.forgot-password-submit:hover {
+    background-color: #002f17;
+}
+
+/* Back Button */
+.forgot-password-back {
+    color: #004225;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-top: 15px;
+}
+
+.forgot-password-back:hover {
+    text-decoration: underline;
+}
