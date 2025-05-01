@@ -1,6 +1,8 @@
 # FeastIT-VendorHub 
 
-A vendor-side dashboard for managing menus, orders, profiles, and analytics for the FeastIT food delivery platform.
+A full-stack vendor application for the FeastIT food delivery platform. Enables vendors to manage menus, track orders, update profiles, and view analytics — built with React, Flask, and MySQL.
+
+---
 
 ---
 
